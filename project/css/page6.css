@@ -1,0 +1,635 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* منع الخروج عن حدود الشاشة */
+}
+
+/* Dashboard Container */
+.admin-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
+    /* تحديد أقصى عرض */
+}
+
+/* Header Section */
+.admin-dashboard-header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.admin-logo {
+    height: 50px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    /* منع تجاوز الصورة للشاشة */
+}
+
+/* Horizontal Sidebar Menu */
+.admin-sidebar {
+    background-color: #2C3E50;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* التأكد من ظهور القائمة فوق المحتوى */
+}
+
+/* Sidebar Links */
+.admin-sidebar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/* Sidebar Link Styles */
+.admin-sidebar li {
+    padding: 10px 15px;
+}
+
+.admin-sidebar li a {
+    color: #ECF0F1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    /* منع تكسر النص */
+}
+
+/* Hover Effect */
+.admin-sidebar li a:hover {
+    background-color: #34495E;
+    color: #4CAF50;
+    border-radius: 5px;
+}
+
+/* Active Link */
+.admin-sidebar li a.active {
+    background-color: #16A085;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Main Content Area */
+.admin-main-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex-grow: 1;
+    margin-top: 60px;
+    /* تعويض مكان القائمة الثابتة */
+    max-width: 100%;
+    /* منع التجاوز */
+}
+
+/* Settings Panel */
+.settings-panel {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* توسيط المحتوى */
+}
+
+.settings-heading {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Settings List */
+.settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Settings Item (Card Style) */
+.settings-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.settings-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons */
+.settings-icon {
+    font-size: 24px;
+    color: #007bff;
+}
+
+/* Text Container */
+.settings-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titles */
+.settings-title {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Descriptions */
+.settings-description {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 550px;
+    margin: 20px auto;
+    /* توسيط شريط البحث */
+    padding: 8px 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-bar {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 6px;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+#search-bar::placeholder {
+    color: #aaa;
+    font-size: 14px;
+}
+
+#search-bar:focus {
+    outline: none;
+    font-size: 16px;
+}
+
+.search-container button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.search-container button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.search-container i {
+    font-size: 18px;
+}
+
+/* Notification Form Styling */
+#notification-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Label Styling */
+#notification-form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Textarea Styling */
+#notification-form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    resize: vertical;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Focus Effect for Textarea */
+#notification-form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Select Styling */
+#notification-form select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Focus Effect for Select */
+#notification-form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button Styling */
+#notification-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Button Hover Effect */
+#notification-form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Button Active Effect */
+#notification-form button:active {
+    background-color: #388E3C;
+}
+
+/* Error/Invalid Field Styling */
+#notification-form textarea:invalid,
+#notification-form select:invalid {
+    border-color: #e74c3c;
+}
+
+#notification-form textarea:valid,
+#notification-form select:valid {
+    border-color: #2ecc71;
+}
+
+/* Notifications Section */
+#notifications {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-list {
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.notification-list p {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: #fff;
+    border-left: 5px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.notification-list p i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #4CAF50;
+}
+
+.notification-list p:hover {
+    background: #e8f5e9;
+    transform: scale(1.02);
+}
+
+/* Different colors for icons */
+.notification-list p .fa-exclamation-circle {
+    color: #e74c3c;
+}
+
+.notification-list p .fa-check-circle {
+    color: #2ecc71;
+}
+
+.notification-list p .fa-info-circle {
+    color: #3498db;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn-action {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.btn-action:hover {
+    background-color: #45a049;
+}
+
+.btn-action:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Lists (Users, Projects, Requests) */
+.user-list,
+.project-list,
+.payment-method-list,
+.project-request-list,
+.support-requests {
+    margin-top: 20px;
+}
+
+.user-item,
+.project-item,
+.request-item {
+    background-color: #e0f7fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.user-item p,
+.project-item p,
+.request-item p {
+    margin: 5px 0;
+}
+
+/* Footer Section */
+.admin-footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Payment Methods Section */
+#payment-methods {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#payment-methods h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Payment Option Styles */
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #4CAF50;
+}
+
+.payment-option label {
+    font-size: 18px;
+    color: #555;
+}
+
+.payment-option input[type="radio"]:hover+label {
+    color: #333;
+}
+
+/* Payment Detail Form Styles */
+.payment-detail-form {
+    margin-top: 20px;
+    display: none;
+}
+
+.payment-detail-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.payment-detail-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.payment-detail-form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.payment-detail-form input::placeholder {
+    color: #888;
+}
+
+/* Button Styles for Payment Form */
+#payment-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#payment-form button:hover {
+    background-color: #45a049;
+}
+
+/* Hover Effects */
+.payment-option input[type="radio"]:checked+label {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.payment-option:hover input[type="radio"] {
+    cursor: pointer;
+}
+
+/* Form Error Style */
+.payment-detail-form input:invalid {
+    border-color: #e74c3c;
+}
+
+.payment-detail-form input:valid {
+    border-color: #2ecc71;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .admin-sidebar li a {
+        font-size: 14px;
+    }
+
+    .settings-panel {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        height: auto;
+        position: relative;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .admin-sidebar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .admin-sidebar li {
+        padding: 8px 0;
+    }
+
+    .admin-dashboard-header {
+        margin-top: 0;
+    }
+
+    .admin-main-content {
+        margin-top: 0;
+        padding: 15px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .settings-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-sidebar li a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .settings-title {
+        font-size: 16px;
+    }
+
+    .settings-description {
+        font-size: 12px;
+    }
+
+    #notification-form {
+        padding: 15px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+}
+
+/* Start Footer */
+.footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 30px 10px;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    /* تضمين الحشو في العرض */
+}
+
+.footer span {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.footer-logo {
+    width: 60px;
+    border-radius: 100%;
+    position: relative;
+    top: 20px;
+    max-width: 100%;
+    /* استجابة الصورة */
+}
+
+/* End Footer */

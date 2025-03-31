@@ -1,0 +1,394 @@
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --list-color1: #3eb1b1;
+    --list-color2: #0b5a5a;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact {
+    padding: 2rem 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -20px;
+}
+
+.contact .special-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #0b5a5a;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    font-size: 14px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0b5a5a;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: #0b5a5a;
+}
+
+/* Social Section */
+.social {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.icon-social a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.icon-social a i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-social a:hover i {
+    transform: scale(1.1);
+    color: #0b5a5a;
+}
+
+/* Notifications Section */
+.notifications {
+    padding: 2rem 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -20px;
+}
+
+.notifications .special-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #0b5a5a;
+    ;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-list li {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.notification-list li:hover {
+    background-color: #e1e7fb;
+}
+
+.notification-list i {
+    font-size: 24px;
+    color: #0b5a5a;
+    ;
+    margin-right: 15px;
+}
+
+.notification-list span {
+    font-size: 16px;
+    color: #333;
+}
+
+.notification-list .time {
+    font-size: 14px;
+    color: #777;
+    margin-left: auto;
+}
+
+/* Start Header */
+
+.header {
+    padding: 20px;
+    overflow: visible !important;
+    background-color: var(--secondary-color);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: visible !important;
+}
+
+.header .logo {
+    width: 60px;
+    border-radius: 100%;
+}
+
+.header .logotext {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-color);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-right: auto;
+}
+
+
+.form-serch {
+    width: 100%;
+    max-width: 400px;
+    height: 35px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    margin: 10px auto;
+    border: none;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    border-color: #10cab793;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.serch-button {
+    border-radius: 80%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-left: 5px;
+    background-color: #10cab793;
+}
+
+
+
+
+.header button {
+    padding: 8px 20px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color var(--main-duration);
+}
+
+.serch-button:hover {
+    background-color: var(--list-color2);
+}
+
+.header button:hover {
+    background-color: var(--list-color2);
+}
+
+
+
+
+
+/*   dropdown   */
+
+.dropdown {
+
+    position: relative;
+
+    display: inline-block;
+
+
+
+
+}
+
+.dropdown img {
+    width: 40px;
+    /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 170px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 99999;
+}
+
+@media (hover: none) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 911px) {
+
+    .dropdown {
+        left: 90%;
+    }
+
+
+}
+
+@media (max-width: 846px) {
+
+    .dropdown {
+        left: 0%;
+    }
+
+
+}
+
+@media (max-width: 667px) {
+
+    .dropdown {
+        left: 90%;
+    }
+
+
+}
+
+@media (max-width:603px) {
+
+    .dropdown {
+        left: 0%;
+    }
+
+
+}
+
+
+
+/* End Header */
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    /* Light green */
+    color: #333;
+    /* Dark text for contrast */
+    margin-top: 2rem;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.footer span {
+    font-weight: bold;
+    color: white;
+}
+.footer p{
+color: white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
